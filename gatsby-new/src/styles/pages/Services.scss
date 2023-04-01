@@ -1,0 +1,12 @@
+@import "./../variables.scss";
+
+.services {
+  margin-top: 50px;
+}
+
+.services__wrapper-for-title {
+  @media (min-width: $big-desktop-width) {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}

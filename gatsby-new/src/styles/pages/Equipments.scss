@@ -1,0 +1,77 @@
+@import "./../variables.scss";
+
+.equipments {
+  margin-top: 50px;
+}
+
+.equipments__wrapper-for-title {
+  @media (min-width: $big-desktop-width) {
+    width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+.equipments__wrapper-for-photo {
+  display: flex;
+  margin: 50px;
+}
+
+.equipments__wrapper-for-text {
+  padding: 20px;
+
+  @media (min-width: $small-desktop-width) {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 50px;
+  }
+}
+
+.equipments__slider-wrapper {
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.equipments__list-item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 25px;
+  font-size: var(--item-font-size);
+
+  @media (min-width: $small-desktop-width) {
+    padding-left: 37px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    margin-bottom: 20px;
+    padding-left: 62px;
+  }
+}
+
+.equipments__list-item::before {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url("../../assets/images/circle-blue.png");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  content: "";
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    width: 33px;
+    height: 33px;
+    background-size: 33px 33px;
+  }
+}
+
+.equipments__text {
+  font-size: var(--text-font-size);
+}

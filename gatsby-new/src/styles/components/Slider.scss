@@ -1,0 +1,127 @@
+@import "./../variables.scss";
+
+.slider {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px 0;
+
+  @media (min-width: $small-desktop-width) {
+    width: 1200px;
+  }
+}
+
+.slider__main-wrapper {
+  display: flex;
+}
+
+.slider__list-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-height: 265px;
+  overflow: hidden;
+
+  &--background-our-clients::before {
+    position: absolute;
+    top: 12px;
+    left: 3px;
+    width: 236px;
+    height: 53px;
+    background-color: #afc5d9;
+    border-radius: 23px;
+    content: "";
+  }
+
+  @media (min-width: $small-desktop-width) {
+    max-height: fit-content;
+
+    &--background-our-clients::before {
+      content: none;
+    }
+  }
+}
+
+.slider__list {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  transition-duration: 1s;
+  transition-property: transform;
+
+  @media (min-width: $small-desktop-width) {
+    width: 930px;
+  }
+}
+
+.slider__button {
+  z-index: 2;
+  display: inline-block;
+  padding: 0;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border: none;
+
+  &--next {
+    transform: rotate(-180deg);
+  }
+
+  @media (min-width: $small-desktop-width) {
+    &--next {
+      transform: none;
+    }
+
+    &--back {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.slider__arrow {
+  &--desktop {
+    display: none;
+  }
+
+  &--mobile {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: $small-desktop-width) {
+    &--desktop {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}
+
+.slider__arrow--desktop
+.slider__arrow-path {
+  fill: #000000;
+}
+
+.slider__button:hover {
+  cursor: pointer;
+}
+
+.slider__button:hover .slider__arrow-path {
+  opacity: 0.6;
+}
+
+.slider__button:active .slider__arrow-path {
+  opacity: 0.4;
+}
+
+.slider__button:disabled .slider__arrow-path {
+  opacity: 0.2;
+}

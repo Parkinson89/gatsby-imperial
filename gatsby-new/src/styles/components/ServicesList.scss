@@ -1,0 +1,164 @@
+@import "./../variables.scss";
+
+.services-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  @media (min-width: $small-desktop-width) {
+    padding: 50px;
+  }
+}
+
+.services-block__list {
+  @media (min-width: $small-desktop-width) {
+    margin-left: 131px;
+  }
+}
+
+.services-block__title {
+  font-size: var(--title-font-size);
+
+  @media (min-width: $small-desktop-width) {
+    margin: 0 0 30px;
+  }
+}
+
+.services-block__item {
+  position: relative;
+  margin-bottom: 30px;
+  font-size: var(--text-font-size);
+}
+
+@media (min-width: $small-desktop-width) {
+  .services-block__item::before {
+    position: absolute;
+    left: -131px;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    content: "";
+  }
+
+  #physical::before {
+    background-image: url("../../assets/images/services/camera.jpg");
+  }
+
+  #escort::before {
+    background-image: url("../../assets/images/services/home.jpg");
+  }
+
+  #personal::before {
+    background-image: url("../../assets/images/services/gun.jpg");
+  }
+
+  #development::before {
+    background-image: url("../../assets/images/services/home-plus.jpg");
+  }
+}
+
+.services-block__item-button {
+  position: relative;
+  display: inline;
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background-color: inherit;
+  background-image: url("../../assets/images/plus-blue.png");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition-duration: 500ms;
+
+  @media (min-width: $small-desktop-width) {
+    width: 26px;
+    height: 26px;
+    background-size: 26px 26px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    width: 45px;
+    height: 45px;
+    background-size: 45px 45px;
+  }
+}
+
+.services-block__item-button--click {
+  transform: rotate(90deg);
+  transition-duration: 500ms;
+}
+
+.services-block__item-title {
+  display: inline;
+  margin: 0;
+  font-weight: normal;
+  font-size: var(--item-font-size);
+  line-height: 13px;
+  vertical-align: bottom;
+
+  @media (min-width: $small-desktop-width) {
+    line-height: 67px;
+    vertical-align: sub;
+  }
+}
+
+.services-block__item-lower-list--list-hidden {
+  display: none;
+}
+
+.services-block__item-lower-list--list-show {
+  display: block;
+  max-width: 700px;
+  margin-top: 20px;
+  padding-left: 20px;
+  transition-duration: 1s;
+  transition-property: display;
+
+  @media (min-width: $big-desktop-width) {
+    max-width: 1000px;
+    padding-left: 81px;
+  }
+}
+
+.services-block__item-lower-list--list-show li::before {
+  position: absolute;
+  top: 6px;
+  left: -27px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../../assets/images/circle-blue.png");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  content: "";
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    left: -43px;
+    width: 33px;
+    height: 33px;
+    background-size: 33px 33px;
+  }
+}
+
+.services-block__item-lower-list--list-show li {
+  position: relative;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    margin-bottom: 20px;
+  }
+}

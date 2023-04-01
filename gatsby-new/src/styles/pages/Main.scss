@@ -1,0 +1,40 @@
+@import "./../variables.scss";
+
+.main {
+  margin-top: -28px;
+  padding: 20px 20px 60px 20px;
+  background-color: rgba(54,109,161,0.8);
+  background-image: url("../../assets/images/background-main.png");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 10px;
+  background-size: cover;
+
+  @media (min-width: $small-desktop-width) {
+    margin-top: -41px;
+    padding: 0 50px 111px 50px;
+    background-position-y: -110px;
+  }
+}
+
+.main__title {
+  font-size: 20px;
+  text-align: center;
+
+  @media (min-width: $small-desktop-width) {
+    margin-bottom: 70px;
+    font-size: 30px;
+
+    .main__title br {
+      display: none;
+    }
+  }
+}
+
+.main__text {
+  font-size: 16px;
+
+  @media (min-width: $small-desktop-width) {
+    font-size: 21px;
+  }
+}

@@ -1,0 +1,62 @@
+@import "./../variables.scss";
+
+.nav__lower-list--closed {
+  display: none;
+}
+
+.nav__open-lower-list {
+  position: absolute;
+  top: 13px;
+  right: 34%;
+  padding-top: 2px;
+  color: #ffffff;
+  font-size: 10px;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $small-desktop-width) {
+    position: static;
+    padding-top: 4px;
+  }
+}
+
+.nav__lower-list-item {
+  position: relative;
+  text-align: center;
+  animation-name: item;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+
+  @media (min-width: $small-desktop-width) {
+    position: static;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 65px;
+  }
+}
+
+.nav__lower-list-link {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  min-height: 30px;
+  padding: 5px 0;
+  color: #ffffff;
+  font-size: 19px;
+  text-decoration: none;
+
+  @media (min-width: $big-desktop-width) {
+    font-size: 27px;
+  }
+}
+
+.footer__nav-item .nav__lower-list-item {
+  text-align: center;
+}
+
+.footer__nav-item .nav__lower-list--opened {
+  padding: 25px 0 35px;
+}

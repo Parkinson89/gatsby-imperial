@@ -1,0 +1,13 @@
+@import "./../variables.scss";
+
+.certificates__item {
+  padding: 0 20px;
+}
+
+.certificates__pic {
+  width: 170px;
+
+  @media (min-width: $small-desktop-width) {
+    width: 259px;
+  }
+}

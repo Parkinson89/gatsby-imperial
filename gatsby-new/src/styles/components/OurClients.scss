@@ -1,0 +1,42 @@
+@import "./../variables.scss";
+
+.our-clients__pic {
+  max-width: 70px;
+  max-height: 36px;
+
+  @media (min-width: $small-desktop-width) {
+    max-width: 257px;
+    max-height: 150px;
+  }
+}
+
+.our-clients__list {
+  padding: 20px 0;
+}
+
+.our-clients__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  height: 36px;
+
+  @media (min-width: $small-desktop-width) {
+    min-width: 259px;
+    height: 150px;
+    padding: 0 20px;
+  }
+}
+
+.our-clients__item--active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 36px;
+
+  @media (min-width: $small-desktop-width) {
+    width: 300px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,16 @@
+@import "./../variables.scss";
+
+.letters__item {
+  padding: 0 20px;
+}
+
+.letters__pic {
+  width: 170px;
+  height: 240px;
+  border: 1px solid #000000;
+
+  @media (min-width: $small-desktop-width) {
+    width: 259px;
+    height: 355px;
+  }
+}
