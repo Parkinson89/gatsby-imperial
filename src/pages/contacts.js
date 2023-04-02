@@ -33,7 +33,7 @@ function Contacts() {
         215476223
       );
     }
-  });
+  }, []);
 
   return (
     <Layout>

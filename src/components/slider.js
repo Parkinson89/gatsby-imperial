@@ -8,12 +8,15 @@ function Slider({ modalExist, firstTitle, pics, className, id, mobileTranslate, 
   const [show, setShow] = React.useState(false);
   const [modalPic, setModalPic] = React.useState(0);
   const [width, setWidth] = React.useState(0);
-  if (isBrowser) {
-    window.addEventListener("resize", () => {
+
+  React.useEffect(() => {
+    if (isBrowser) {
+      window.addEventListener("resize", () => {
+        setWidth(window.screen.availWidth);
+      });
       setWidth(window.screen.availWidth);
-    });
-    setWidth(window.screen.availWidth);
-  }
+    }
+  }, []);
   const debounce = (callback, timeoutDelay) => {
     let timeoutId;
     return (...rest) => {
