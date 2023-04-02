@@ -2,14 +2,18 @@ import * as React from "react";
 import MyModal from "./myModal";
 import "../styles/components/Slider.scss";
 
+const isBrowser = typeof window !== "undefined";
+
 function Slider({ modalExist, firstTitle, pics, className, id, mobileTranslate, mobileCountCenter }) {
   const [show, setShow] = React.useState(false);
   const [modalPic, setModalPic] = React.useState(0);
-  const [width, setWidth] = React.useState(window.screen.availWidth);
-  window.addEventListener("resize", () => {
+  const [width, setWidth] = React.useState(0);
+  if (isBrowser) {
+    window.addEventListener("resize", () => {
+      setWidth(window.screen.availWidth);
+    });
     setWidth(window.screen.availWidth);
-  });
-
+  }
   const debounce = (callback, timeoutDelay) => {
     let timeoutId;
     return (...rest) => {
