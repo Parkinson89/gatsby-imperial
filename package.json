@@ -17,7 +17,10 @@
     "sass": "^1.60.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-order": "^6.0.3"
   },
   "keywords": [
     "gatsby"

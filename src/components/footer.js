@@ -19,7 +19,7 @@ function Footer() {
           <p className="footer__copyright">©2022 группа компаний</p>
         </div>
         <Social />
-        <ContactsBlock />
+        <ContactsBlock color="white" />
       </div>
     </footer>
   );
