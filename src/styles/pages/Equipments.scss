@@ -1,9 +1,5 @@
 @import "./../variables.scss";
 
-.equipments {
-  margin-top: 50px;
-}
-
 .equipments__wrapper-for-title {
   @media (min-width: $big-desktop-width) {
     width: 1920px;

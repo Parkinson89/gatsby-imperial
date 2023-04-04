@@ -1,9 +1,5 @@
 @import "./../variables.scss";
 
-.vacancies {
-  margin-top: 50px;
-}
-
 .vacancies__wrapper-for-title {
   @media (min-width: $big-desktop-width) {
     width: 1920px;
