@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { CERTIFICATES, LETTERS, LOGOS, PERSONS } from "../data";
+import { CERTIFICATES, LETTERS, LOGOS, PERSONS } from "@data";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Layout } from "@templates";
 import {
-  Layout,
   PersonBlock,
   Advantages,
   WorkAdvantages,
@@ -16,7 +16,7 @@ import {
   CustomLeftArrow,
   CustomRightArrow,
   ButtonGroup
-} from "../components";
+} from "@components";
 
 import "../styles/index.scss";
 import "../styles/pages/Main.scss";
@@ -84,7 +84,7 @@ const IndexPage = (props) => {
   };
 
   return (
-    <Layout>
+    <Layout title="Главная">
       <div>
         <div className="main">
           <CompanyGroup />

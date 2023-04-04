@@ -6,3 +6,15 @@
     margin: 0 auto;
   }
 }
+
+.services__wrapper-for-vk-images {
+  display: none;
+
+  @media (min-width: $small-desktop-width) {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 96px;
+    column-gap: 121px;
+  }
+}

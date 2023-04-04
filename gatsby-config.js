@@ -8,13 +8,26 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`
-  },
+  // siteMetadata: {
+  //   description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+  //   author: `@gatsbyjs`,
+  // },
   plugins: [
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@src": "src",
+          "@components": "src/components",
+          "@styles": "src/styles",
+          "@assets": "src/assets",
+          "@data": "src/data",
+          "@router": "src/router",
+          "@templates": "src/templates"
+        },
+        extensions: ["js"]
+      }
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

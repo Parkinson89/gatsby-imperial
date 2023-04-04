@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 /* global VK */
 import "../styles/pages/Contacts.scss";
-import { Social, Layout } from "../components";
+import { Layout } from "@templates";
+import { Social } from "@components";
 const isBrowser = typeof window !== "undefined";
 
 function Contacts() {
@@ -35,7 +36,7 @@ function Contacts() {
   // }, []);
 
   return (
-    <Layout>
+    <Layout title="Контакты">
       <div className="contacts">
         <div className="contacts__wrapper-for-title">
           <h1 className="contacts__title title--blue">Контакты</h1>

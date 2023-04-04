@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "../components";
+import { Layout } from "@templates";
 import "../styles/pages/Vacancies.scss";
 
 function Vacancies() {
@@ -9,7 +9,7 @@ function Vacancies() {
   //   });
 
   return (
-    <Layout>
+    <Layout title="Трудоустройство">
       <div className="vacancies">
         <div className="vacancies__wrapper-for-title">
           <h1 className="vacancies__title title--blue">Трудоустройство</h1>

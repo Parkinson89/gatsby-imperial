@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/pages/Equipments.scss";
-import { SlideShow, Layout } from "../components";
-
-import eq1 from "../assets/images/forEquipments/eq1.jpg";
-import eq2 from "../assets/images/forEquipments/eq2.jpg";
-import eq3 from "../assets/images/forEquipments/eq3.jpg";
-import eq4 from "../assets/images/forEquipments/eq4.jpg";
+import { SlideShow } from "@components";
+import { Layout } from "@templates";
+import eq1 from "@assets/images/forEquipments/eq1.jpg";
+import eq2 from "@assets/images/forEquipments/eq2.jpg";
+import eq3 from "@assets/images/forEquipments/eq3.jpg";
+import eq4 from "@assets/images/forEquipments/eq4.jpg";
 
 function Equipments() {
   // useEffect(() => {
@@ -36,7 +36,7 @@ function Equipments() {
   ];
 
   return (
-    <Layout>
+    <Layout title="Оборудование">
       <div className="equipments">
         <div className="equipments__wrapper-for-title">
           <h1 className="equipments__title title--blue">Оборудование</h1>

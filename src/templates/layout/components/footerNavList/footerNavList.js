@@ -1,7 +1,7 @@
 import React from "react";
 import "./FooterNavList.scss";
 import { Link } from "gatsby";
-import { PUBLIC_ROUTES } from "../../router/routes";
+import { PUBLIC_ROUTES } from "../../../../router/routes";
 import NavLowerList from "../navLowerList/navLowerList";
 
 function FooterNavList() {

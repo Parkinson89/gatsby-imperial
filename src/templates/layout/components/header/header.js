@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 
 import "./Header.scss";
 import NavLowerList from "../navLowerList/navLowerList";
-import Logo from "../../assets/images/logo-mobile.png";
-import { PUBLIC_ROUTES } from "../../router/routes";
+import Logo from "../../../../assets/images/logo-mobile.png";
+import { PUBLIC_ROUTES } from "../../../../router/routes";
 import NavMenu from "../navMenu/navMenu";
 
 function Header() {
