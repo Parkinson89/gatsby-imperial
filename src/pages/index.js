@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 
 import Layout from "../components/layout";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 import PersonBlock from "../components/personBlock";
 import Advantages from "../components/advantages";
 import WorkAdvantages from "../components/workAdvantages";
@@ -65,12 +68,63 @@ const IndexPage = (props) => {
     }, 500);
   }, [props]);
 
+  // const responsive = {
+  //   desktop: {
+  //     breakpoint: { max: 3000, min: 1024 },
+  //     items: 3
+  //   },
+  //   tablet: {
+  //     breakpoint: { max: 1024, min: 464 },
+  //     items: 2
+  //   },
+  //   mobile: {
+  //     breakpoint: { max: 660, min: 0 },
+  //     items: 1
+  //   }
+  // };
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 1920 },
+      items: 1
+    },
+    desktop: {
+      breakpoint: { max: 1920, min: 1200 },
+      items: 1
+    },
+    tablet: {
+      breakpoint: { max: 1200, min: 660 },
+      items: 1
+    },
+    mobile: {
+      breakpoint: { max: 660, min: 0 },
+      items: 1
+    }
+  };
+
   return (
     <Layout>
       <div>
         <div className="main">
           <CompanyGroup />
-          <PersonBlock />
+          <Carousel responsive={responsive} removeArrowOnDeviceType={["mobile", "tablet"]}>
+            <PersonBlock />
+            <PersonBlock />
+            <PersonBlock />
+            {/* <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div> */}
+          </Carousel>
+          ;
+          {/* <Carousel>
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+          </Carousel> */}
+          {/* <PersonBlock /> */}
         </div>
         <Advantages />
         <Slider
