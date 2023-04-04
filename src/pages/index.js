@@ -1,9 +1,22 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { CERTIFICATES, LETTERS, LOGOS, PERSONS } from "../data";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Layout, PersonBlock, Advantages, WorkAdvantages, CompanyGroup, Security, Callback, Slider } from "../components";
+import {
+  Layout,
+  PersonBlock,
+  Advantages,
+  WorkAdvantages,
+  CompanyGroup,
+  Security,
+  Callback,
+  Slider,
+  ImageItem,
+  MyModal,
+  CustomLeftArrow,
+  CustomRightArrow
+} from "../components";
 
 import "../styles/index.scss";
 import "../styles/pages/Main.scss";
@@ -13,6 +26,14 @@ import "../styles/components/Certificates.scss";
 import "../styles/components/Letters.scss";
 
 const IndexPage = (props) => {
+  const [show, setShow] = useState(false);
+  const [modalPic, setModalPic] = useState(0);
+
+  // useEffect(() => {
+  //   console.log(1);
+  //   setShow(true);
+  // }, [modalPic]);
+
   useEffect(() => {
     setTimeout(() => {
       if (props?.location?.state?.hash) {
@@ -29,7 +50,7 @@ const IndexPage = (props) => {
     }, 500);
   }, [props]);
 
-  const responsive = {
+  const responsiveForPerson = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1920 },
       items: 1
@@ -48,59 +69,76 @@ const IndexPage = (props) => {
     }
   };
 
+  const responsiveForOtherSliders = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1920 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 1920, min: 1200 },
+      items: 4
+    },
+    tablet: {
+      breakpoint: { max: 1200, min: 660 },
+      items: 3
+    },
+    mobile: {
+      breakpoint: { max: 660, min: 0 },
+      items: 2
+    }
+  };
+
   return (
     <Layout>
       <div>
         <div className="main">
           <CompanyGroup />
-          <Carousel responsive={responsive} removeArrowOnDeviceType={["mobile", "tablet"]} containerClass="carousel-container">
-            {PERSONS.map((person) => {
-              return <PersonBlock image={person.image} name={person.name} phone={person.phone} position={person.position} />;
+          <Carousel
+            responsive={responsiveForPerson}
+            removeArrowOnDeviceType={["mobile", "tablet"]}
+            containerClass="carousel-container-for-persons"
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
+          >
+            {PERSONS.map((person, index) => {
+              return <PersonBlock key={`${index}-person`} image={person.image} name={person.name} phone={person.phone} position={person.position} />;
             })}
-            {/* <PersonBlock />
-            <PersonBlock /> */}
-            {/* <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-            <div>Item 4</div> */}
           </Carousel>
-          ;
-          {/* <Carousel>
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-            <div>Item 4</div>
-          </Carousel> */}
-          {/* <PersonBlock /> */}
         </div>
         <Advantages />
-        <Slider
-          modalExist={false}
-          id="ourClients"
-          firstTitle={"Клиенты и партнёры"}
-          pics={LOGOS}
-          className="our-clients"
-          mobileTranslate={80}
-          mobileCountCenter={3}
-        />
-        <Slider
-          modalExist={true}
-          id="certificates"
-          firstTitle={"Лицензии"}
-          pics={CERTIFICATES}
-          className="certificates"
-          mobileTranslate={220}
-          mobileCountCenter={1}
-        />
-        <Slider
-          modalExist={true}
-          id="letters"
-          firstTitle={"Благодарственные письма"}
-          pics={LETTERS}
-          className="letters"
-          mobileTranslate={220}
-          mobileCountCenter={1}
-        />
+        <h1 className="title--blue">Клиенты и партнёры</h1>
+        <Carousel
+          responsive={responsiveForOtherSliders}
+          containerClass="carousel-container-for-logos"
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+        >
+          {LOGOS.map((logo, index) => {
+            return <ImageItem key={`${index}-logo`} logo={logo} className="our-clients" />;
+          })}
+        </Carousel>
+        <h1 className="title--blue">Лицензии</h1>
+        <Carousel
+          responsive={responsiveForOtherSliders}
+          containerClass="carousel-container-for-logos"
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+        >
+          {CERTIFICATES.map((certificate, index) => {
+            return <ImageItem key={`${index}-certificate`} logo={certificate} className="certificates" setModalPic={setModalPic} setShow={setShow} />;
+          })}
+        </Carousel>
+        <h1 className="title--blue">Благодарственные письма</h1>
+        <Carousel
+          responsive={responsiveForOtherSliders}
+          containerClass="carousel-container-for-logos"
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+        >
+          {LETTERS.map((letter, index) => {
+            return <ImageItem key={`${index}-letter`} logo={letter} className="letters" setModalPic={setModalPic} setShow={setShow} />;
+          })}
+        </Carousel>
         <Security id="security" />
         <WorkAdvantages />
         <div className="security-text-info">
@@ -128,6 +166,7 @@ const IndexPage = (props) => {
           </p>
         </div>
       </div>
+      <MyModal visible={show} setVisible={setShow} src={modalPic} />
     </Layout>
   );
 };

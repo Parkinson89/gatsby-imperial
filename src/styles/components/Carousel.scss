@@ -1,4 +1,23 @@
-.carousel-container {
+@import "./../variables.scss";
+
+.carousel-container-for-persons {
   max-width: 350px;
   margin: 0 auto;
+}
+
+.carousel-container-for-logos {
+  max-width: 350px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 660px;
+  }
+
+  @media (min-width: $small-desktop-width) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    max-width: 1920px;
+  }
 }

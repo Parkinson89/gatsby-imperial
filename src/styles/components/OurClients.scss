@@ -1,8 +1,8 @@
 @import "./../variables.scss";
 
 .our-clients__pic {
-  max-width: 70px;
-  max-height: 36px;
+  max-width: 130px;
+  max-height: 130px;
 
   @media (min-width: $small-desktop-width) {
     max-width: 257px;
@@ -19,7 +19,7 @@
   align-items: center;
   justify-content: center;
   min-width: 70px;
-  height: 36px;
+  height: 130px;
 
   @media (min-width: $small-desktop-width) {
     min-width: 259px;

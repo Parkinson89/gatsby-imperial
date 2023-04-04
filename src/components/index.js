@@ -18,3 +18,6 @@ export { default as Slider } from "./slider/slider";
 export { default as SlideShow } from "./slideShow/slideShow";
 export { default as Social } from "./social/social";
 export { default as WorkAdvantages } from "./workAdvantages/workAdvantages";
+export { default as ImageItem } from "./imageItem/imageItem";
+export { default as CustomLeftArrow } from "./arrows/leftArrow";
+export { default as CustomRightArrow } from "./arrows/rightArrow";
