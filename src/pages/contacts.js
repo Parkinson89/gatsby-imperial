@@ -6,34 +6,34 @@ import Layout from "../components/layout";
 const isBrowser = typeof window !== "undefined";
 
 function Contacts() {
-  useEffect(() => {
-    const el = document.getElementsByClassName("header");
-    el[0].scrollIntoView({ behavior: "smooth" });
+  // useEffect(() => {
+  //   const el = document.getElementsByClassName("header");
+  //   el[0].scrollIntoView({ behavior: "smooth" });
 
-    if (isBrowser) {
-      const globalWidth = window.screen.availWidth;
-      let widgetWidth;
+  //   if (isBrowser) {
+  //     const globalWidth = window.screen.availWidth;
+  //     let widgetWidth;
 
-      if (globalWidth < 660) {
-        widgetWidth = 220;
-      } else if (globalWidth >= 660) {
-        widgetWidth = 500;
-      }
+  //     if (globalWidth < 660) {
+  //       widgetWidth = 220;
+  //     } else if (globalWidth >= 660) {
+  //       widgetWidth = 500;
+  //     }
 
-      VK.Widgets.Group(
-        "vk_groups",
-        {
-          mode: 3,
-          no_cover: 1,
-          width: widgetWidth,
-          color1: "FFFFFF",
-          color2: "000000",
-          color3: "5181B8"
-        },
-        215476223
-      );
-    }
-  }, []);
+  //     VK.Widgets.Group(
+  //       "vk_groups",
+  //       {
+  //         mode: 3,
+  //         no_cover: 1,
+  //         width: widgetWidth,
+  //         color1: "FFFFFF",
+  //         color2: "000000",
+  //         color3: "5181B8"
+  //       },
+  //       215476223
+  //     );
+  //   }
+  // }, []);
 
   return (
     <Layout>
