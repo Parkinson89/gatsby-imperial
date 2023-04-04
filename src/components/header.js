@@ -1,19 +1,35 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 
 import "../styles/components/Header.scss";
 import NavLowerList from "./navLowerList";
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo-mobile.png";
 import { PUBLIC_ROUTES } from "../router/routes";
+import NavMenu from "./navMenu";
 
 function Header() {
+  const [navMenuVisible, setNavMenuVisible] = useState(false);
+  // const [navClassName, setNavClassName] = React.useState("nav nav--closed");
+
   return (
-    <header className="header">
-      <div className="header__wrapper">
-        <Link className="header__main-link" to="/">
-          <img className="header__logo" src={Logo} width="100" height="100" alt="Логотип сайта." />
-        </Link>
-        <nav className="nav">
+    <>
+      <header className="header">
+        <div className="header__wrapper">
+          <nav className="nav">
+            <button
+              className="nav__toggle"
+              type="button"
+              onClick={() => {
+                setNavMenuVisible(!navMenuVisible);
+              }}
+            >
+              <span className="visually-hidden">Открыть меню</span>
+            </button>
+            <Link className="header__main-link" to="/">
+              <img className="header__logo" src={Logo} width="37" height="44" alt="Логотип сайта." />
+            </Link>
+            <button type="button" className="header__phone-btn"></button>
+          </nav>
           <ul className="nav__list">
             {PUBLIC_ROUTES.map((route) => {
               if (route.textLink !== null) {
@@ -36,9 +52,10 @@ function Header() {
               }
             })}
           </ul>
-        </nav>
-      </div>
-    </header>
+        </div>
+      </header>
+      {navMenuVisible && <NavMenu setVisible={setNavMenuVisible} />}
+    </>
   );
 }
 

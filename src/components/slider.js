@@ -1,15 +1,15 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import MyModal from "./myModal";
 import "../styles/components/Slider.scss";
 
 const isBrowser = typeof window !== "undefined";
 
 function Slider({ modalExist, firstTitle, pics, className, id, mobileTranslate, mobileCountCenter }) {
-  const [show, setShow] = React.useState(false);
-  const [modalPic, setModalPic] = React.useState(0);
-  const [width, setWidth] = React.useState(0);
+  const [show, setShow] = useState(false);
+  const [modalPic, setModalPic] = useState(0);
+  const [width, setWidth] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isBrowser) {
       window.addEventListener("resize", () => {
         setWidth(window.screen.availWidth);
@@ -25,7 +25,7 @@ function Slider({ modalExist, firstTitle, pics, className, id, mobileTranslate, 
     };
   };
 
-  const [translateX, setTranslateX] = React.useState(0);
+  const [translateX, setTranslateX] = useState(0);
   const length = pics.length;
   let elementsBeforeCenter = 0;
   let elementsAfterCenter = 0;
@@ -48,7 +48,7 @@ function Slider({ modalExist, firstTitle, pics, className, id, mobileTranslate, 
     }
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     let defaultTranslate = 0;
 
     if (width < 1200) {
@@ -77,7 +77,7 @@ function Slider({ modalExist, firstTitle, pics, className, id, mobileTranslate, 
     );
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     let defaultTranslate = 0;
 
     if (width < 1200) {

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import "../styles/pages/Services.scss";
 import Layout from "../components/layout";
 import ServicesList from "../components/servicesList";
@@ -7,8 +7,7 @@ import { openUl } from "../components/servicesList";
 import { UL_SERVICES } from "../data/dataServices";
 
 function Services(props) {
-  React.useEffect(() => {
-    console.log(props);
+  useEffect(() => {
     setTimeout(() => {
       if (props?.location?.state?.hash) {
         const hash = props.location.state.hash;

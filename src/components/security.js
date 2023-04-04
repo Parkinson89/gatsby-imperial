@@ -1,8 +1,7 @@
-import * as React from "react";
+import React from "react";
 import "../styles/components/Security.scss";
 import securityBack from "../assets/images/security-back.jpg";
 import securityMan from "../assets/images/security-man.jpg";
-import Advantages from "./advantages";
 
 function Security(props) {
   return (
@@ -43,7 +42,6 @@ function Security(props) {
           безопасности до воплощения их в жизнь. Акцентируем внимание на предоставлении комплекса услуг, направленных на экономическую безопасность
           предприятия. Территориальный охват оказания услуг - Ростовская область, Южный Федеральный округ и Северный Кавказ.
         </p>
-        <Advantages />
       </div>
     </div>
   );

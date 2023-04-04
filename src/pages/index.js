@@ -1,6 +1,10 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 
 import Layout from "../components/layout";
+
+import PersonBlock from "../components/personBlock";
+import Advantages from "../components/advantages";
+import WorkAdvantages from "../components/workAdvantages";
 
 import "../styles/index.scss";
 import "../styles/pages/Main.scss";
@@ -45,8 +49,7 @@ const IndexPage = (props) => {
   const CERTIFICATES = [cer11, cer12, cer13, cer14, cer31, cer32, cer41, cer42, cer2];
   const LETTERS = [let1, let2, let3, let4, let5];
 
-  React.useEffect(() => {
-    console.log(props);
+  useEffect(() => {
     setTimeout(() => {
       if (props?.location?.state?.hash) {
         const hash = props.location.state.hash;
@@ -67,8 +70,9 @@ const IndexPage = (props) => {
       <div>
         <div className="main">
           <CompanyGroup />
-          <Callback id="callback" />
+          <PersonBlock />
         </div>
+        <Advantages />
         <Slider
           modalExist={false}
           id="ourClients"
@@ -97,6 +101,7 @@ const IndexPage = (props) => {
           mobileCountCenter={1}
         />
         <Security id="security" />
+        <WorkAdvantages />
       </div>
     </Layout>
   );

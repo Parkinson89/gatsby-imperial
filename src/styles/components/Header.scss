@@ -1,13 +1,16 @@
 @import "./../variables.scss";
 
 .header {
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  padding-top: 12px;
   background-color: #366da1;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 
   @media (min-width: $small-desktop-width) {
+    position: relative;
     border-bottom-right-radius: 29px;
     border-bottom-left-radius: 29px;
   }
@@ -97,13 +100,24 @@
 }
 
 .header__phone-btn {
+  position: relative;
   width: 40px;
   height: 40px;
   background-color: inherit;
-  background-image: url("../../assets/images/phone.svg");
-  background-repeat: no-repeat;
-  background-size: 40px 40px;
   border: none;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(173, 173, 173, 1);
+    content: "";
+    -webkit-mask-image: url("../../assets/images/header-phone.svg");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 40px 40px;
+  }
 
   @media (min-width: $small-desktop-width) {
     display: none;

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import "../styles/components/LawBlock.scss";
 import { OL_SERVICES } from "../data/dataServices";
 

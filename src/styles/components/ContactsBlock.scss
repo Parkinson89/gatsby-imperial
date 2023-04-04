@@ -2,10 +2,18 @@
 
 .black {
   color: #000000;
+
+  &::before {
+    background-color: #000000;
+  }
 }
 
 .white {
   color: #ffffff;
+
+  &::before {
+    background-color: #ffffff;
+  }
 }
 
 .contacts-block {
@@ -49,9 +57,39 @@
 }
 
 .contacts-block__contact-info {
+  position: relative;
+  padding-left: 35px;
   font-size: calc(var(--item-font-size) - 2px);
   line-height: 24px;
   text-decoration: none;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    content: "";
+    -webkit-mask-size: 30px 30px;
+  }
+
+  &--location::before {
+    -webkit-mask-image: url("../../assets/images/socialIcons/location.svg");
+  }
+
+  &--briefcase::before {
+    -webkit-mask-image: url("../../assets/images/socialIcons/briefcase.svg");
+  }
+
+  &--phone::before {
+    -webkit-mask-image: url("../../assets/images/socialIcons/phone.svg");
+  }
+
+  &--mail::before {
+    -webkit-mask-image: url("../../assets/images/socialIcons/mail.svg");
+  }
 
   @media (min-width: $small-desktop-width) {
     font-size: calc(var(--item-font-size) - 8px);

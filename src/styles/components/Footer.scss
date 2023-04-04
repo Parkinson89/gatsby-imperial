@@ -7,13 +7,36 @@
   background-color: #366da1;
 }
 
-.footer__map {
+.footer__map,
+.footer__building-background,
+.footer__building {
   width: 100%;
   height: 200px;
   border: none;
 
-  @media (min-width: $small-desktop-width) {
+  @media (min-width: $tablet-width) {
+    width: 50%;
     height: 502px;
+  }
+}
+
+.footer__wrapper-for-map-ang-photo {
+  width: 100%;
+  max-width: 1944px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.footer__building-background {
+  background-image: url("../../assets/images/footer-building-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../assets/images/footer-building-desktop.jpg");
   }
 }
 

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 /* global VK */
 import "../styles/pages/Contacts.scss";
 import Social from "../components/social";
@@ -6,7 +6,7 @@ import Layout from "../components/layout";
 const isBrowser = typeof window !== "undefined";
 
 function Contacts() {
-  React.useEffect(() => {
+  useEffect(() => {
     const el = document.getElementsByClassName("header");
     el[0].scrollIntoView({ behavior: "smooth" });
 

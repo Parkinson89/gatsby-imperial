@@ -1,0 +1,60 @@
+@import "./../variables.scss";
+
+.person-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 10px;
+
+  &::before {
+    position: absolute;
+    bottom: -43px;
+    left: 0;
+    z-index: 5;
+    width: 132px;
+    height: 134px;
+    background-image: url("../../assets/images/branch-for-photo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 139px 133px;
+    content: "";
+  }
+}
+
+.person-block__img {
+  display: block;
+  width: 120px;
+  height: 125px;
+  border-radius: 50%;
+}
+
+.person-block__text-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.person-block__text-info-name {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.person-block__text-info-contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #bcbcbc;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.person-block__text-info-position {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 10px;
+}

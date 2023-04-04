@@ -1,11 +1,13 @@
 @import "./../variables.scss";
 
 .footer__nav {
-  padding: 50px 20px;
+  display: none;
 
-  @media (min-width: $big-desktop-width) {
+  @media (min-width: $small-desktop-width) {
+    display: block;
     max-width: 1920px;
     margin: 0 auto;
+    padding: 50px 20px;
   }
 }
 

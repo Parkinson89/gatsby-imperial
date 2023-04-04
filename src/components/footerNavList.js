@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import "../styles/components/FooterNavList.scss";
 import { Link } from "gatsby";
 import { PUBLIC_ROUTES } from "../router/routes";
