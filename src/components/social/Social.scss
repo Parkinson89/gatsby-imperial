@@ -1,6 +1,8 @@
 @import "../../styles/variables.scss";
 
 .social {
+  padding-bottom: 30px;
+
   @media (min-width: $small-desktop-width) {
     margin-left: 94px;
   }
