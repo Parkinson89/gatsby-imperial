@@ -6,8 +6,8 @@
 }
 
 .carousel-container-for-logos {
-  max-width: 350px;
-  margin: 0 auto;
+  max-width: 280px;
+  // padding: 0 50px;
 
   @media (min-width: $tablet-width) {
     max-width: 660px;
@@ -20,4 +20,19 @@
   @media (min-width: $big-desktop-width) {
     max-width: 1920px;
   }
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel-button-group {
+  position: absolute;
+  top: 59px;
+  left: 0;
+  width: 360px;
+  height: 50px;
 }

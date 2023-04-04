@@ -11,11 +11,11 @@ import {
   CompanyGroup,
   Security,
   Callback,
-  Slider,
   ImageItem,
   MyModal,
   CustomLeftArrow,
-  CustomRightArrow
+  CustomRightArrow,
+  ButtonGroup
 } from "../components";
 
 import "../styles/index.scss";
@@ -28,11 +28,6 @@ import "../styles/components/Letters.scss";
 const IndexPage = (props) => {
   const [show, setShow] = useState(false);
   const [modalPic, setModalPic] = useState(0);
-
-  // useEffect(() => {
-  //   console.log(1);
-  //   setShow(true);
-  // }, [modalPic]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -97,6 +92,7 @@ const IndexPage = (props) => {
             responsive={responsiveForPerson}
             removeArrowOnDeviceType={["mobile", "tablet"]}
             containerClass="carousel-container-for-persons"
+            renderButtonGroupOutside={true}
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
           >
@@ -107,38 +103,49 @@ const IndexPage = (props) => {
         </div>
         <Advantages />
         <h1 className="title--blue">Клиенты и партнёры</h1>
-        <Carousel
-          responsive={responsiveForOtherSliders}
-          containerClass="carousel-container-for-logos"
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
-        >
-          {LOGOS.map((logo, index) => {
-            return <ImageItem key={`${index}-logo`} logo={logo} className="our-clients" />;
-          })}
-        </Carousel>
+        <div className="carousel-wrapper">
+          <Carousel
+            responsive={responsiveForOtherSliders}
+            containerClass="carousel-container-for-logos"
+            arrows={false}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+          >
+            {LOGOS.map((logo, index) => {
+              return <ImageItem key={`${index}-logo`} logo={logo} className="our-clients" />;
+            })}
+          </Carousel>
+        </div>
         <h1 className="title--blue">Лицензии</h1>
-        <Carousel
-          responsive={responsiveForOtherSliders}
-          containerClass="carousel-container-for-logos"
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
-        >
-          {CERTIFICATES.map((certificate, index) => {
-            return <ImageItem key={`${index}-certificate`} logo={certificate} className="certificates" setModalPic={setModalPic} setShow={setShow} />;
-          })}
-        </Carousel>
+        <div className="carousel-wrapper">
+          <Carousel
+            responsive={responsiveForOtherSliders}
+            containerClass="carousel-container-for-logos"
+            arrows={false}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+          >
+            {CERTIFICATES.map((certificate, index) => {
+              return (
+                <ImageItem key={`${index}-certificate`} logo={certificate} className="certificates" setModalPic={setModalPic} setShow={setShow} />
+              );
+            })}
+          </Carousel>
+        </div>
         <h1 className="title--blue">Благодарственные письма</h1>
-        <Carousel
-          responsive={responsiveForOtherSliders}
-          containerClass="carousel-container-for-logos"
-          customLeftArrow={<CustomLeftArrow />}
-          customRightArrow={<CustomRightArrow />}
-        >
-          {LETTERS.map((letter, index) => {
-            return <ImageItem key={`${index}-letter`} logo={letter} className="letters" setModalPic={setModalPic} setShow={setShow} />;
-          })}
-        </Carousel>
+        <div className="carousel-wrapper">
+          <Carousel
+            responsive={responsiveForOtherSliders}
+            containerClass="carousel-container-for-logos"
+            arrows={false}
+            renderButtonGroupOutside={true}
+            customButtonGroup={<ButtonGroup />}
+          >
+            {LETTERS.map((letter, index) => {
+              return <ImageItem key={`${index}-letter`} logo={letter} className="letters" setModalPic={setModalPic} setShow={setShow} />;
+            })}
+          </Carousel>
+        </div>
         <Security id="security" />
         <WorkAdvantages />
         <div className="security-text-info">
