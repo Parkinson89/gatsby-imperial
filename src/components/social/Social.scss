@@ -1,0 +1,91 @@
+@import "../../styles/variables.scss";
+
+.social {
+  @media (min-width: $small-desktop-width) {
+    margin-left: 94px;
+  }
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social__item {
+  margin-right: 10px;
+}
+
+.social__item--whats {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  background-color: rgb(49, 216, 49);
+  border-radius: 36px;
+
+  @media (min-width: $small-desktop-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.social__link {
+  display: block;
+}
+
+.social__icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 36px;
+
+  &--whats {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(49, 216, 49);
+  }
+
+  &--vk {
+    background-color: #1976d2;
+  }
+
+  &--telegram {
+    background-color: #29b6f6;
+  }
+
+  &--inst {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f09433", endColorstr="#bc1888",GradientType=1 );
+  }
+
+  @media (min-width: $small-desktop-width) {
+    width: 40px;
+    height: 40px;
+
+    &--whats {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (min-width: $big-desktop-width) {
+    width: 50px;
+    height: 50px;
+
+    &--whats {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.social__sprite {
+  display: none;
+}

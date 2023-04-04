@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/pages/Equipments.scss";
-import SlideShow from "../components/slideShow";
-import Layout from "../components/layout";
+import { SlideShow, Layout } from "../components";
 
 import eq1 from "../assets/images/forEquipments/eq1.jpg";
 import eq2 from "../assets/images/forEquipments/eq2.jpg";

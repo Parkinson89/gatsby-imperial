@@ -1,0 +1,110 @@
+@import "../../styles/variables.scss";
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 70px auto;
+  column-gap: 30px;
+
+  @media (max-width: $mobile-width-only) {
+    order: 6;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 28px;
+
+  @media (min-width: $small-desktop-width) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    box-sizing: content-box;
+    width: 250px;
+    height: 250px;
+    padding: 37px;
+  }
+}
+
+.advantages__text-big-wrapper {
+  width: 150px;
+  height: 150px;
+  background-color: #366da1;
+  border-radius: 50%;
+}
+
+.advantages__text {
+  &--clock {
+    font-size: 100px;
+
+    &::before {
+      background-image: url("../../assets/images/advantages/clock.png");
+    }
+  }
+
+  &--arrow {
+    font-size: 100px;
+
+    &::before {
+      background-image: url("../../assets/images/advantages/arrow.png");
+    }
+  }
+
+  &--breaf {
+    font-size: 80px;
+
+    &::before {
+      background-image: url("../../assets/images/advantages/breaf.png");
+    }
+  }
+
+  &--heands {
+    font-size: 80px;
+
+    &::before {
+      background-image: url("../../assets/images/advantages/heands.png");
+    }
+  }
+
+  &--big {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    font-weight: 300;
+    text-align: center;
+    background-image: linear-gradient(180deg, #b9b9b9 0%, #bcbcbc 33.33%, rgba(185, 185, 185, 0.59) 100%);
+    -webkit-background-clip: text;
+    border-radius: 50%;
+    -webkit-text-fill-color: transparent;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 150px 150px;
+      content: "";
+    }
+  }
+
+  &--small {
+    color: #6e93d9;
+    font-size: 36px;
+  }
+}

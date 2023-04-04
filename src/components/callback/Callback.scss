@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.callback-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  margin: 0 auto 0 auto;
+  text-decoration: none;
+  background-color: #366da1;
+  border: none;
+  border-radius: 32px;
+
+  @media (min-width: $small-desktop-width) {
+    width: 500px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+  }
+}
+
+.callback-btn:active {
+  opacity: 0.8;
+}
+
+.callback-btn__text {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: $small-desktop-width) {
+    font-size: 37px;
+  }
+}

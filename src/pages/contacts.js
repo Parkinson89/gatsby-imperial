@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 /* global VK */
 import "../styles/pages/Contacts.scss";
-import Social from "../components/social";
-import Layout from "../components/layout";
+import { Social, Layout } from "../components";
 const isBrowser = typeof window !== "undefined";
 
 function Contacts() {

@@ -1,10 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/pages/Services.scss";
-import Layout from "../components/layout";
-import ServicesList from "../components/servicesList";
-import LawBlock from "../components/lawBlock";
-import { openUl } from "../components/servicesList";
-import { UL_SERVICES } from "../data/dataServices";
+import { Layout, ServicesList, LawBlock } from "../components";
+import { openUl } from "../components/servicesList/servicesList";
+import { UL_SERVICES } from "../data";
 
 function Services(props) {
   useEffect(() => {

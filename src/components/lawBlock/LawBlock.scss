@@ -1,0 +1,74 @@
+@import "../../styles/variables.scss";
+
+.law-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @media (min-width: $small-desktop-width) {
+    padding: 50px;
+  }
+}
+
+.law-text {
+  font-weight: bold;
+  font-size: var(--title-font-size);
+
+  @media (min-width: $small-desktop-width) {
+    margin: 40px 0;
+  }
+}
+
+.law-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 23px;
+  list-style-type: none;
+
+  @media (min-width: $big-desktop-width) {
+    padding-left: 33px;
+  }
+}
+
+.law-item {
+  position: relative;
+  margin-bottom: 5px;
+  font-size: var(--text-font-size);
+
+  @media (min-width: $small-desktop-width) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.law-item::before {
+  position: absolute;
+  top: 6px;
+  left: -27px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../../assets/images/circle-blue.png");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  content: "";
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: 22px;
+    background-size: 22px 22px;
+  }
+
+  @media (min-width: $big-desktop-width) {
+    left: -43px;
+    width: 33px;
+    height: 33px;
+    background-size: 33px 33px;
+  }
+}

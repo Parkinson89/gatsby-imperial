@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.myModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  display: none;
+  background: rgba(0,0,0, 0.5);
+}
+
+.myModal__wrapper {
+  min-width: 250px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.myModal__pic {
+  max-width: 800px;
+  max-height: 423px;
+
+  @media (min-width: $small-desktop-width) {
+    max-width: 847px;
+    max-height: 100vh;
+  }
+}
+
+.myModal--active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

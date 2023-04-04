@@ -1,57 +1,18 @@
 import React, { useEffect } from "react";
-
-import Layout from "../components/layout";
+import { CERTIFICATES, LETTERS, LOGOS, PERSONS } from "../data";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-import PersonBlock from "../components/personBlock";
-import Advantages from "../components/advantages";
-import WorkAdvantages from "../components/workAdvantages";
+import { Layout, PersonBlock, Advantages, WorkAdvantages, CompanyGroup, Security, Callback, Slider } from "../components";
 
 import "../styles/index.scss";
 import "../styles/pages/Main.scss";
+import "../styles/components/Carousel.scss";
 import "../styles/components/OurClients.scss";
 import "../styles/components/Certificates.scss";
 import "../styles/components/Letters.scss";
 
-import CompanyGroup from "../components/companyGroup";
-import Security from "../components/security";
-import Callback from "../components/callback";
-import Slider from "../components/slider";
-
-import agro from "../assets/images/companies/agro.png";
-import gazprom from "../assets/images/companies/Gazprom-Logo-rus.png";
-import loko from "../assets/images/companies/loko.png";
-import mts from "../assets/images/companies/mts.png";
-import theatre from "../assets/images/companies/theatre.png";
-import eco from "../assets/images/companies/eco.png";
-import lukoil from "../assets/images/companies/lukoil.png";
-import rostov from "../assets/images/companies/rostov.png";
-import PNK from "../assets/images/companies/pnk-group_logo.png";
-import eksmo from "../assets/images/companies/eksmo.png";
-
-import cer11 from "../assets/images/certificates/cer-1-1.jpg";
-import cer12 from "../assets/images/certificates/cer-1-2.jpg";
-import cer13 from "../assets/images/certificates/cer-1-3.jpg";
-import cer14 from "../assets/images/certificates/cer-1-4.jpg";
-import cer2 from "../assets/images/certificates/cer-2-1.jpg";
-import cer31 from "../assets/images/certificates/cer-3-1.jpg";
-import cer32 from "../assets/images/certificates/cer-3-2.jpg";
-import cer41 from "../assets/images/certificates/cer-4-1.jpg";
-import cer42 from "../assets/images/certificates/cer-4-2.jpg";
-
-import let1 from "../assets/images/letters/let1.jpg";
-import let2 from "../assets/images/letters/let2.jpg";
-import let3 from "../assets/images/letters/let3.jpg";
-import let4 from "../assets/images/letters/let4.jpg";
-import let5 from "../assets/images/letters/let5.jpg";
-
 const IndexPage = (props) => {
-  const LOGOS = [agro, gazprom, loko, mts, theatre, eco, lukoil, rostov, PNK, eksmo];
-  const CERTIFICATES = [cer11, cer12, cer13, cer14, cer31, cer32, cer41, cer42, cer2];
-  const LETTERS = [let1, let2, let3, let4, let5];
-
   useEffect(() => {
     setTimeout(() => {
       if (props?.location?.state?.hash) {
@@ -68,24 +29,8 @@ const IndexPage = (props) => {
     }, 500);
   }, [props]);
 
-  // const responsive = {
-  //   desktop: {
-  //     breakpoint: { max: 3000, min: 1024 },
-  //     items: 3
-  //   },
-  //   tablet: {
-  //     breakpoint: { max: 1024, min: 464 },
-  //     items: 2
-  //   },
-  //   mobile: {
-  //     breakpoint: { max: 660, min: 0 },
-  //     items: 1
-  //   }
-  // };
-
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1920 },
       items: 1
     },
@@ -108,10 +53,12 @@ const IndexPage = (props) => {
       <div>
         <div className="main">
           <CompanyGroup />
-          <Carousel responsive={responsive} removeArrowOnDeviceType={["mobile", "tablet"]}>
-            <PersonBlock />
-            <PersonBlock />
-            <PersonBlock />
+          <Carousel responsive={responsive} removeArrowOnDeviceType={["mobile", "tablet"]} containerClass="carousel-container">
+            {PERSONS.map((person) => {
+              return <PersonBlock image={person.image} name={person.name} phone={person.phone} position={person.position} />;
+            })}
+            {/* <PersonBlock />
+            <PersonBlock /> */}
             {/* <div>Item 1</div>
             <div>Item 2</div>
             <div>Item 3</div>
@@ -156,6 +103,30 @@ const IndexPage = (props) => {
         />
         <Security id="security" />
         <WorkAdvantages />
+        <div className="security-text-info">
+          <p>
+            <b>Охрана</b> - актуальная услуга в нашем нестабильном мире, где каждый день возникают новые угрозы и вызовы для нашей безопасности. Как
+            юридическое или физическое лицо, вы должны быть уверены в своей безопасности и защите в любой ситуации.
+          </p>
+          <p>
+            Группа Компаний "Холдинг” Империум - это компании, которые предоставляют широкий спектр услуг по охране, включая физическую охрану,
+            техническую безопасность, мониторинг, управление доступом и многое другое. Мы специализируемся на обеспечении высококачественной и
+            профессиональной охраны для юридических и физических лиц.
+          </p>
+          <p>
+            Наша компания активно развивается и стремится стать лучшей в отрасли. Мы постоянно совершенствуем наши услуги и инвестируем в новые
+            технологии и оборудование, чтобы обеспечить нашим клиентам максимальную защиту.
+          </p>
+          <p>
+            Наша команда профессионалов состоит из высококвалифицированных специалистов, которые имеют многолетний опыт работы в охранной отрасли. Мы
+            строго следим за процессом найма и отбираем только лучших кандидатов, чтобы обеспечить высокий уровень квалификации наших сотрудников.
+          </p>
+          <p>
+            Мы гордимся тем, что мы можем предоставить нашим клиентам максимально надежную и эффективную охрану. Если вы ищете надежную компанию,
+            которая обеспечит вас высококачественной охраной, то Группа Компаний "Холдинг Империум" - идеальный выбор для вас. Свяжитесь с нами
+            сегодня, чтобы узнать больше о наших услугах и как мы можем помочь вам обеспечить безопасность и защиту в любых условиях.
+          </p>
+        </div>
       </div>
     </Layout>
   );
