@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 
 import "./Header.scss";
 import NavLowerList from "../navLowerList/navLowerList";
-import Logo from "../../../../assets/images/logo-mobile.png";
-import { PUBLIC_ROUTES } from "../../../../router/routes";
+import Logo from "@assets/images/logo-mobile.png";
+import { PUBLIC_ROUTES } from "@router/routes";
 import NavMenu from "../navMenu/navMenu";
 
 function Header() {
@@ -41,12 +41,8 @@ function Header() {
                     <Link className="nav__link" to={route.path}>
                       {route.textLink}
                     </Link>
-                    {route.lowerLavelLinks ? (
-                      <NavLowerList
-                        modifier={"nav__lower-list-item--header"}
-                        list={route}
-                        startClassName={"nav__lower-list nav__lower-list--closed"}
-                      />
+                    {route.lowerLevelLinks ? (
+                      <NavLowerList modifier="nav__lower-list-item--header" list={route} startClassName="nav__lower-list nav__lower-list--closed" />
                     ) : null}
                   </li>
                 );

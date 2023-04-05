@@ -1,4 +1,4 @@
-@import "./../variables.scss";
+@import "@styles/variables.scss";
 
 .main {
   margin-top: -19px;
@@ -12,9 +12,13 @@
 
   @media (min-width: $small-desktop-width) {
     margin-top: -41px;
-    padding: 0 50px 111px 50px;
+    padding: 0 50px 329px 50px;
     background-position-y: -110px;
   }
+}
+
+.main-wrapper {
+  position: relative;
 }
 
 .main__title {

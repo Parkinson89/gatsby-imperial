@@ -1,4 +1,4 @@
-@import "./../variables.scss";
+@import "@styles/variables.scss";
 
 .vacancies__wrapper-for-title {
   @media (min-width: $big-desktop-width) {
@@ -65,7 +65,7 @@
   left: -27px;
   width: 12px;
   height: 12px;
-  background-image: url("../../assets/images/circle-blue.png");
+  background-image: url("@assets/images/circle-blue.png");
   background-repeat: no-repeat;
   background-size: 12px 12px;
   content: "";

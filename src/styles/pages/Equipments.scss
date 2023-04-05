@@ -1,4 +1,4 @@
-@import "./../variables.scss";
+@import "@styles/variables.scss";
 
 .equipments__wrapper-for-title {
   @media (min-width: $big-desktop-width) {
@@ -50,7 +50,7 @@
   left: 0;
   width: 12px;
   height: 12px;
-  background-image: url("../../assets/images/circle-blue.png");
+  background-image: url("@assets/images/circle-blue.png");
   background-repeat: no-repeat;
   background-size: 12px 12px;
   content: "";
@@ -70,4 +70,31 @@
 
 .equipments__text {
   font-size: var(--text-font-size);
+}
+
+.equipments__wrapper-for-vk-image-and-phone {
+  display: none;
+
+  @media (min-width: $big-desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 96px;
+    column-gap: 121px;
+  }
+}
+
+.equipments__phone-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 613px;
+  height: 221px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 31px;
+  letter-spacing: 0.12em;
+  background-color: #b9b9b9;
+  border-radius: 38px;
 }

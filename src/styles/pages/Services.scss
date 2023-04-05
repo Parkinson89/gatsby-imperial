@@ -1,4 +1,4 @@
-@import "./../variables.scss";
+@import "@styles/variables.scss";
 
 .services__wrapper-for-title {
   @media (min-width: $big-desktop-width) {
@@ -10,7 +10,7 @@
 .services__wrapper-for-vk-images {
   display: none;
 
-  @media (min-width: $small-desktop-width) {
+  @media (min-width: $big-desktop-width) {
     display: flex;
     justify-content: center;
     margin: 0 auto;

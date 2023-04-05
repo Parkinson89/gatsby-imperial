@@ -1,7 +1,7 @@
 import React from "react";
 import "./FooterNavList.scss";
 import { Link } from "gatsby";
-import { PUBLIC_ROUTES } from "../../../../router/routes";
+import { PUBLIC_ROUTES } from "@router/routes";
 import NavLowerList from "../navLowerList/navLowerList";
 
 function FooterNavList() {
@@ -15,7 +15,7 @@ function FooterNavList() {
                 <Link className="footer__nav-link" to={route.path}>
                   {route.textLink}
                 </Link>
-                {route.lowerLavelLinks ? (
+                {route.lowerLevelLinks ? (
                   <NavLowerList modifier={""} list={route} buttonExist={false} startClassName={"nav__lower-list nav__lower-list--opened"} />
                 ) : null}
               </li>

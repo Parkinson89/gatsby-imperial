@@ -1,5 +1,4 @@
 import React from "react";
-import "./ImageItem.scss";
 
 const ImageItem = ({ className, logo, setModalPic, setShow }) => {
   return (
@@ -13,7 +12,7 @@ const ImageItem = ({ className, logo, setModalPic, setShow }) => {
         }
       }}
     >
-      <img className={`${className}__pic`} src={logo} alt="Логотип компании" />
+      <img className={`${className}__pic`} src={logo} alt="Логотип компании." />
     </li>
   );
 };

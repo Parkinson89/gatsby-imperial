@@ -1,7 +1,6 @@
 export { default as Advantages } from "./advantages/advantages";
 export { default as Callback } from "./callback/callback";
 export { default as CompanyGroup } from "./companyGroup/companyGroup";
-export { default as Form } from "./form/form";
 export { default as LawBlock } from "./lawBlock/lawBlock";
 export { default as MyModal } from "./myModal/myModal";
 export { default as PersonBlock } from "./personBlock/personBlock";

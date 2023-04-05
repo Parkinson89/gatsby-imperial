@@ -18,12 +18,12 @@ import {
   ButtonGroup
 } from "@components";
 
-import "../styles/index.scss";
-import "../styles/pages/Main.scss";
-import "../styles/components/Carousel.scss";
-import "../styles/components/OurClients.scss";
-import "../styles/components/Certificates.scss";
-import "../styles/components/Letters.scss";
+import "@styles/index.scss";
+import "@styles/pages/Main.scss";
+import "@styles/components/Carousel.scss";
+import "@styles/components/OurClients.scss";
+import "@styles/components/Certificates.scss";
+import "@styles/components/Letters.scss";
 
 const IndexPage = (props) => {
   const [show, setShow] = useState(false);
@@ -85,7 +85,7 @@ const IndexPage = (props) => {
 
   return (
     <Layout title="Главная">
-      <div>
+      <div className="main-wrapper">
         <div className="main">
           <CompanyGroup />
           <Carousel
@@ -97,7 +97,16 @@ const IndexPage = (props) => {
             customRightArrow={<CustomRightArrow />}
           >
             {PERSONS.map((person, index) => {
-              return <PersonBlock key={`${index}-person`} image={person.image} name={person.name} phone={person.phone} position={person.position} />;
+              return (
+                <PersonBlock
+                  key={`${index}-person`}
+                  mail="test@mail.ru"
+                  image={person.image}
+                  name={person.name}
+                  phone={person.phone}
+                  position={person.position}
+                />
+              );
             })}
           </Carousel>
         </div>

@@ -1,4 +1,4 @@
-@import "../../../../styles/variables.scss";
+@import "@styles/variables.scss";
 
 .header {
   position: fixed;
@@ -121,7 +121,7 @@
     height: 40px;
     background-color: rgba(173, 173, 173, 1);
     content: "";
-    -webkit-mask-image: url("../../../../assets/images/header-phone.svg");
+    -webkit-mask-image: url("@assets/images/header-phone.svg");
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 40px 40px;
   }

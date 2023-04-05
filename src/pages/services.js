@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import "../styles/pages/Services.scss";
+import "@styles/pages/Services.scss";
 import { Layout } from "@templates";
 import { ServicesList, LawBlock } from "@components";
-import { openUl } from "@components/servicesList/servicesList";
+import { openUl } from "@helpers";
 import { UL_SERVICES } from "@data";
 import security from "@assets/images/vk-links/security.png";
 import videoObserver from "@assets/images/vk-links/video-observer.png";
@@ -42,19 +42,11 @@ function Services(props) {
         <LawBlock />
         <ServicesList />
         <div className="services__wrapper-for-vk-images">
-          <a className="services__vk-link" href="https://vk.com/@imperiumrnd-zachem-vam-ohrana" target="_blank">
-            <img src={security} width="521" height="497" />
-            {/* <span className="services__text-for-vk-link">Ваш бизнес в безопасности</span> */}
-            {/* <div className="services__wrapper-for-text-vk-link">
-              <span className="services__text-for-vk-link"> </span>
-            </div> */}
+          <a className="services__vk-link" href="https://vk.com/@imperiumrnd-zachem-vam-ohrana" target="_blank" rel="noreferrer">
+            <img src={security} width="521" height="497" alt="Изображение ссылка, зачем вам охрана?" />
           </a>
-          <a className="services__vk-link" href="https://vk.com/@imperiumrnd-dlya-chego-neobhodimo-videonabludenie" target="_blank">
-            <img src={videoObserver} width="738" height="497" />
-            {/* <span className="services__text-for-vk-link">Ваш бизнес в безопасности</span> */}
-            {/* <div className="services__wrapper-for-text-vk-link">
-              <span className="services__text-for-vk-link"> </span>
-            </div> */}
+          <a className="services__vk-link" href="https://vk.com/@imperiumrnd-dlya-chego-neobhodimo-videonabludenie" target="_blank" rel="noreferrer">
+            <img src={videoObserver} width="738" height="497" alt="Изображение ссылка, для чего необходимо видеонаблюдение?" />
           </a>
         </div>
       </div>

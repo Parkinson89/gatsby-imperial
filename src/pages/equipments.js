@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/pages/Equipments.scss";
+import "@styles/pages/Equipments.scss";
 import { SlideShow } from "@components";
 import { Layout } from "@templates";
 import eq1 from "@assets/images/forEquipments/eq1.jpg";
@@ -7,12 +7,9 @@ import eq2 from "@assets/images/forEquipments/eq2.jpg";
 import eq3 from "@assets/images/forEquipments/eq3.jpg";
 import eq4 from "@assets/images/forEquipments/eq4.jpg";
 
-function Equipments() {
-  // useEffect(() => {
-  //   const el = document.getElementsByClassName("header");
-  //   el[0].scrollIntoView({ behavior: "smooth" });
-  // });
+import ManObserve from "@assets/images/vk-links/man-observe.png";
 
+function Equipments() {
   const firstSliderItems = [
     {
       id: 1,
@@ -86,6 +83,19 @@ function Equipments() {
               и восстановительных работ
             </li>
           </ul>
+        </div>
+        <div className="equipments__wrapper-for-vk-image-and-phone">
+          <div className="equipments__phone-block">
+            НОМЕР ДЛЯ СВЯЗИ: <br /> +7 (863) 210-78-58
+          </div>
+          <a
+            className="equipments__vk-link"
+            href="https://vk.com/@imperiumrnd-pultovaya-ohrana-kak-ona-rabotaet-i-pochemu-ona-vam-neobhodi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={ManObserve} width="772" height="464" alt="Изображение ссылка, как работает пультовая охрана и почему она вам необходима?" />
+          </a>
         </div>
       </div>
     </Layout>

@@ -1,13 +1,7 @@
 import React from "react";
 import "./ContactsBlock.scss";
 
-function ContactsBlock(props) {
-  let color = "white";
-
-  if (props.color === "black") {
-    color = "black";
-  }
-
+function ContactsBlock({ color = "white" }) {
   return (
     <section className="contacts-block">
       <span className="visually-hidden"> Контактная информация:</span>

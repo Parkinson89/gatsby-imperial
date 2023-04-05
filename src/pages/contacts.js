@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 /* global VK */
-import "../styles/pages/Contacts.scss";
+import "@styles/pages/Contacts.scss";
 import { Layout } from "@templates";
 import { Social } from "@components";
-const isBrowser = typeof window !== "undefined";
 
 function Contacts() {
   // useEffect(() => {

@@ -24,21 +24,21 @@
 
   &--arrow {
     &::before {
-      background-image: url("../../assets/images/workAdvantages/arrow.png");
+      background-image: url("@assets/images/workAdvantages/arrow.png");
     }
   }
 
   &--shield {
     &::before {
       left: -39px;
-      background-image: url("../../assets/images/workAdvantages/shield.png");
+      background-image: url("@assets/images/workAdvantages/shield.png");
     }
   }
 
   &--agent {
     &::before {
       left: 18px;
-      background-image: url("../../assets/images/workAdvantages/agent.png");
+      background-image: url("@assets/images/workAdvantages/agent.png");
     }
   }
 }

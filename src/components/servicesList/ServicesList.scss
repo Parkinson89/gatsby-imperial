@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "@styles/variables.scss";
 
 .services-block {
   display: flex;
@@ -44,19 +44,19 @@
   }
 
   #physical::before {
-    background-image: url("../../assets/images/services/camera.jpg");
+    background-image: url("@assets/images/services/camera.jpg");
   }
 
   #escort::before {
-    background-image: url("../../assets/images/services/home.jpg");
+    background-image: url("@assets/images/services/home.jpg");
   }
 
   #personal::before {
-    background-image: url("../../assets/images/services/gun.jpg");
+    background-image: url("@assets/images/services/gun.jpg");
   }
 
   #development::before {
-    background-image: url("../../assets/images/services/home-plus.jpg");
+    background-image: url("@assets/images/services/home-plus.jpg");
   }
 }
 
@@ -67,7 +67,7 @@
   height: 18px;
   margin-right: 5px;
   background-color: inherit;
-  background-image: url("../../assets/images/plus-blue.png");
+  background-image: url("@assets/images/plus-blue.png");
   background-repeat: no-repeat;
   background-size: 18px 18px;
   border: none;
@@ -131,7 +131,7 @@
   left: -27px;
   width: 12px;
   height: 12px;
-  background-image: url("../../assets/images/circle-blue.png");
+  background-image: url("@assets/images/circle-blue.png");
   background-repeat: no-repeat;
   background-size: 12px 12px;
   content: "";

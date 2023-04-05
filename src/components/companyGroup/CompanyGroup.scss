@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "@styles/variables.scss";
 
 .company-group {
   position: relative;
@@ -8,21 +8,11 @@
   justify-content: center;
   margin-bottom: 28px;
   padding-bottom: 35px;
-
-  @media (min-width: $small-desktop-width) {
-    padding-bottom: 128px;
-  }
-
-  @media (min-width: $big-desktop-width) {
-    padding-bottom: 305px;
-  }
 }
 
 .company-group__title {
   position: relative;
   display: block;
-  // min-width: 700px;
-  // min-height: 316px;
   margin-top: 41px;
   margin-bottom: 0;
   padding-top: 34px;
@@ -49,12 +39,12 @@
 
   &::before {
     left: -64px;
-    background-image: url("../../assets/images/left-branch.png");
+    background-image: url("@assets/images/left-branch.png");
   }
 
   &::after {
     right: -64px;
-    background-image: url("../../assets/images/right-branch.png");
+    background-image: url("@assets/images/right-branch.png");
   }
 
   @media (min-width: $big-desktop-width) {

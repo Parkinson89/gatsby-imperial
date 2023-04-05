@@ -3,9 +3,9 @@ import "./Security.scss";
 import securityBack from "../../assets/images/security-back.jpg";
 import securityMan from "../../assets/images/security-man.jpg";
 
-function Security(props) {
+function Security({ id }) {
   return (
-    <div className="security" id={props.id}>
+    <div className="security" id={id}>
       <h1 className="security__title title--blue">Охрана</h1>
       <div className="security__main-wrapper">
         <img className="security__pic security__pic--back" src={securityBack} alt="Изображение формы." />

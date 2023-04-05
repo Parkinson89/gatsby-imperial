@@ -1,13 +1,8 @@
 import React from "react";
 import { Layout } from "@templates";
-import "../styles/pages/Vacancies.scss";
+import "@styles/pages/Vacancies.scss";
 
 function Vacancies() {
-  //   useEffect(() => {
-  //     const el = document.getElementsByClassName("header");
-  //     el[0].scrollIntoView({ behavior: "smooth" });
-  //   });
-
   return (
     <Layout title="Трудоустройство">
       <div className="vacancies">

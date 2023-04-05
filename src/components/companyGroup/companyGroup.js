@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 import "./CompanyGroup.scss";
-import IT from "../../assets/images/IT.png";
-import IS from "../../assets/images/IS.png";
-import ISS from "../../assets/images/ISS.png";
+import IT from "@assets/images/IT.png";
+import IS from "@assets/images/IS.png";
+import ISS from "@assets/images/ISS.png";
 
 function CompanyGroup() {
   return (

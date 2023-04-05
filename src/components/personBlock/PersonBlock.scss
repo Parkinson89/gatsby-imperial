@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "@styles/variables.scss";
 
 .person-block {
   position: relative;
@@ -15,7 +15,7 @@
     z-index: 5;
     width: 132px;
     height: 134px;
-    background-image: url("../../assets/images/branch-for-photo.png");
+    background-image: url("@assets/images/branch-for-photo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 139px 133px;

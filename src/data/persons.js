@@ -1,7 +1,7 @@
-import branicImage from "../assets/images/persons/mobile/branic.jpg";
-import gnetovImage from "../assets/images/persons/mobile/gnetov.jpg";
-import novikovImage from "../assets/images/persons/mobile/novikov.jpg";
-import samosudovImage from "../assets/images/persons/mobile/samosudov.png";
+import branicImage from "@assets/images/persons/mobile/branic.jpg";
+import gnetovImage from "@assets/images/persons/mobile/gnetov.jpg";
+import novikovImage from "@assets/images/persons/mobile/novikov.jpg";
+import samosudovImage from "@assets/images/persons/mobile/samosudov.png";
 
 export const PERSONS = [
   {

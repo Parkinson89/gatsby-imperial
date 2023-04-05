@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Footer.scss";
 import FooterNavList from "../footerNavList/footerNavList";
-import { Social } from "../../../../components";
+import { Social } from "@components";
 import ContactsBlock from "../contactsBlock/contactsBlock";
-import logo from "../../../../assets/images/logo.png";
+import logo from "@assets/images/logo.png";
 import { Link, Script } from "gatsby";
-/* global ymaps */
-const isBrowser = typeof window !== "undefined";
+import { isBrowser } from "@helpers";
 
 function init() {
   var myMap = new window.ymaps.Map("map", {
