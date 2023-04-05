@@ -1,6 +1,8 @@
 import React from "react";
-import "./LawBlock.scss";
+
 import { OL_SERVICES } from "@data";
+
+import "./LawBlock.scss";
 
 function LawBlock() {
   return (

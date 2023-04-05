@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./WorkAdvantages.scss";
 
 function WorkAdvantages() {

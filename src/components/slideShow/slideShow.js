@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./SlideShow.scss";
 
 function SlideShow({ items, classNameModify }) {

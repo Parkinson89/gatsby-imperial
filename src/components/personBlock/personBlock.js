@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./PersonBlock.scss";
 
 function PersonBlock({ image, name, phone, position, mail }) {

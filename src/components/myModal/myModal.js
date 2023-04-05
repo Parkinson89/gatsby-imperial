@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./MyModal.scss";
 
 const MyModal = ({ src, visible, setVisible }) => {

@@ -1,7 +1,7 @@
 @import "@styles/variables.scss";
 
 .callback-btn {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 200px;
@@ -13,6 +13,7 @@
   border-radius: 32px;
 
   @media (min-width: $small-desktop-width) {
+    display: flex;
     width: 500px;
     height: 80px;
     margin: 0 auto 20px auto;

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
+
 import "./CompanyGroup.scss";
-import IT from "@assets/images/IT.png";
-import IS from "@assets/images/IS.png";
-import ISS from "@assets/images/ISS.png";
+import IT from "@assets/images/companyLogos/IT.png";
+import IS from "@assets/images/companyLogos/IS.png";
+import ISS from "@assets/images/companyLogos/ISS.png";
 
 function CompanyGroup() {
   return (
@@ -15,7 +16,7 @@ function CompanyGroup() {
       <ul className="company-group__list">
         <li className="company-group__item">
           <Link className="company-group__link" to="/equipments">
-            <img className="company-group__logo" src={IT} alt="Логотип ИМПЕРИУМ ТРЭЙДИНГ ЭНД ИНЖИНИРИНГ." />
+            <img className="company-group__logo company-group__logo--it" src={IT} alt="Логотип ИМПЕРИУМ ТРЭЙДИНГ ЭНД ИНЖИНИРИНГ." />
           </Link>
         </li>
         <li className="company-group__item">

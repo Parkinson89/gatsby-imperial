@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./ContactsBlock.scss";
 
 function ContactsBlock({ color = "white" }) {

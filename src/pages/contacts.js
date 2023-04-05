@@ -1,39 +1,15 @@
-import React, { useEffect } from "react";
 /* global VK */
-import "@styles/pages/Contacts.scss";
+import React from "react";
+import { Script } from "gatsby";
+
 import { Layout } from "@templates";
-import { Social } from "@components";
+import { Social, PersonBlock } from "@components";
+import { PERSONS } from "@data";
+import { isBrowser } from "@helpers";
+
+import "@styles/pages/Contacts.scss";
 
 function Contacts() {
-  // useEffect(() => {
-  //   const el = document.getElementsByClassName("header");
-  //   el[0].scrollIntoView({ behavior: "smooth" });
-
-  //   if (isBrowser) {
-  //     const globalWidth = window.screen.availWidth;
-  //     let widgetWidth;
-
-  //     if (globalWidth < 660) {
-  //       widgetWidth = 220;
-  //     } else if (globalWidth >= 660) {
-  //       widgetWidth = 500;
-  //     }
-
-  //     VK.Widgets.Group(
-  //       "vk_groups",
-  //       {
-  //         mode: 3,
-  //         no_cover: 1,
-  //         width: widgetWidth,
-  //         color1: "FFFFFF",
-  //         color2: "000000",
-  //         color3: "5181B8"
-  //       },
-  //       215476223
-  //     );
-  //   }
-  // }, []);
-
   return (
     <Layout title="Контакты">
       <div className="contacts">
@@ -64,30 +40,51 @@ function Contacts() {
             </a>
           </div>
           <Social />
-          <div className="contacts__info-block contacts__info-block--maindir">
-            <span className="contacts__label-for-human">Учредитель и руководитель Группы компаний "Империум"</span>
-            <span className="contacts__dirname">Гнетов Максим Сергеевич</span>
-            <a className="contacts__contact-info" href="tel:+79282791907">
-              8(928) 279-19-07
-            </a>
-          </div>
-          <div className="contacts__info-block contacts__info-block--physdir">
-            <span className="contacts__label-for-human">Руководитель направления физической охраны</span>
-            <span className="contacts__dirname"> Браницкий Александр Николаевич</span>
-            <a className="contacts__contact-info" href="tel:+79282293850">
-              8(928) 229-38-50
-            </a>
-          </div>
-          <div className="contacts__info-block contacts__info-block--techdir">
-            <span className="contacts__label-for-human">Руководитель направления технического обеспечения</span>
-            <span className="contacts__dirname"> Новиков Александр Евгеньевич</span>
-            <a className="contacts__contact-info" href="tel:+79285545455">
-              8(928) 554-54-55
-            </a>
+          <div className="contacts__wrapper-for-persons">
+            {PERSONS.map((person, index) => {
+              return (
+                <PersonBlock
+                  key={`${index}-person-contact-page`}
+                  image={person.image}
+                  name={person.name}
+                  phone={person.phone}
+                  position={person.position}
+                />
+              );
+            })}
           </div>
           <div className="contacts__vk-group" id="vk_groups"></div>
         </div>
       </div>
+      <Script
+        src="https://vk.com/js/api/openapi.js?169"
+        type="text/javascript"
+        onLoad={() => {
+          if (isBrowser) {
+            const globalWidth = window.screen.availWidth;
+            let widgetWidth;
+
+            if (globalWidth < 660) {
+              widgetWidth = 220;
+            } else if (globalWidth >= 660) {
+              widgetWidth = 500;
+            }
+
+            VK.Widgets.Group(
+              "vk_groups",
+              {
+                mode: 3,
+                no_cover: 1,
+                width: widgetWidth,
+                color1: "FFFFFF",
+                color2: "000000",
+                color3: "5181B8"
+              },
+              215476223
+            );
+          }
+        }}
+      />
     </Layout>
   );
 }

@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
-import "@styles/pages/Services.scss";
+
 import { Layout } from "@templates";
 import { ServicesList, LawBlock } from "@components";
 import { openUl } from "@helpers";
 import { UL_SERVICES } from "@data";
+
+import "@styles/pages/Services.scss";
 import security from "@assets/images/vk-links/security.png";
 import videoObserver from "@assets/images/vk-links/video-observer.png";
 

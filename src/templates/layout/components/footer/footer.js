@@ -1,11 +1,13 @@
 import React from "react";
-import "./Footer.scss";
-import FooterNavList from "../footerNavList/footerNavList";
-import { Social } from "@components";
-import ContactsBlock from "../contactsBlock/contactsBlock";
-import logo from "@assets/images/logo.png";
 import { Link, Script } from "gatsby";
+
+import FooterNavList from "../footerNavList/footerNavList";
+import ContactsBlock from "../contactsBlock/contactsBlock";
+import { Social } from "@components";
 import { isBrowser } from "@helpers";
+
+import "./Footer.scss";
+import logo from "@assets/images/logo.png";
 
 function init() {
   var myMap = new window.ymaps.Map("map", {
@@ -42,9 +44,7 @@ function Footer() {
         src="https://api-maps.yandex.ru/2.1/?apikey=795b4f53-91b9-41cc-80a4-73bdad8ad195&lang=ru_RU"
         type="text/javascript"
         onLoad={() => {
-          console.log(1);
           if (isBrowser) {
-            console.log(2);
             window.ymaps.ready(init);
           }
         }}

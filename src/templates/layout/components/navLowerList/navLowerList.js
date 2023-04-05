@@ -1,6 +1,7 @@
 import React from "react";
-import "./NavLowerList.scss";
 import { Link } from "gatsby";
+
+import "./NavLowerList.scss";
 
 function NavLowerList({ list, modifier, startClassName }) {
   return (

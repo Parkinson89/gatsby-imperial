@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "@templates";
+
 import "@styles/pages/Vacancies.scss";
 
 function Vacancies() {

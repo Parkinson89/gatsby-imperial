@@ -59,7 +59,7 @@
 
 .company-group__list {
   display: none;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   height: 242px;
   margin-top: 39px;
@@ -76,6 +76,7 @@
   }
 
   @media (min-width: $big-desktop-width) {
+    display: flex;
     min-width: 774px;
     margin-top: -10px;
   }
@@ -95,17 +96,22 @@
 }
 
 .company-group__logo {
-  width: 62px;
-  height: 45px;
+  // width: 62px;
+  // height: 45px;
 
-  @media (min-width: $small-desktop-width) {
-    width: 130px;
-    height: 100px;
-  }
+  // @media (min-width: $small-desktop-width) {
+  //   width: 130px;
+  //   height: 100px;
+  // }
 
   @media (min-width: $big-desktop-width) {
-    width: 182px;
-    height: 140px;
+    width: 205px;
+    height: 294px;
+
+    &--it {
+      width: 227px;
+      height: 227px;
+    }
   }
 }
 

@@ -1,12 +1,13 @@
 import React from "react";
-import "@styles/pages/Equipments.scss";
+
 import { SlideShow } from "@components";
 import { Layout } from "@templates";
+
+import "@styles/pages/Equipments.scss";
 import eq1 from "@assets/images/forEquipments/eq1.jpg";
 import eq2 from "@assets/images/forEquipments/eq2.jpg";
 import eq3 from "@assets/images/forEquipments/eq3.jpg";
 import eq4 from "@assets/images/forEquipments/eq4.jpg";
-
 import ManObserve from "@assets/images/vk-links/man-observe.png";
 
 function Equipments() {

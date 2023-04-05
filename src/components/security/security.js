@@ -1,7 +1,8 @@
 import React from "react";
+
 import "./Security.scss";
-import securityBack from "../../assets/images/security-back.jpg";
-import securityMan from "../../assets/images/security-man.jpg";
+import securityBack from "@assets/images/security-back.jpg";
+import securityMan from "@assets/images/security-man.jpg";
 
 function Security({ id }) {
   return (

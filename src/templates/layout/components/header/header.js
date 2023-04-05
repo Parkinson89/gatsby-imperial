@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 
-import "./Header.scss";
-import NavLowerList from "../navLowerList/navLowerList";
-import Logo from "@assets/images/logo-mobile.png";
 import { PUBLIC_ROUTES } from "@router/routes";
+import NavLowerList from "../navLowerList/navLowerList";
 import NavMenu from "../navMenu/navMenu";
+
+import "./Header.scss";
+import Logo from "@assets/images/logo-mobile.png";
 
 function Header() {
   const [navMenuVisible, setNavMenuVisible] = useState(false);
-  // const [navClassName, setNavClassName] = React.useState("nav nav--closed");
 
   return (
     <>
@@ -31,7 +31,7 @@ function Header() {
             <Link className="header__main-link" to="/">
               <img className="header__logo" src={Logo} width="37" height="44" alt="Логотип сайта." />
             </Link>
-            <button type="button" className="header__phone-btn"></button>
+            <a id="callback" className="header__phone-btn"></a>
           </nav>
           <ul className="nav__list">
             {PUBLIC_ROUTES.map((route) => {

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { CERTIFICATES, LETTERS, LOGOS, PERSONS } from "@data";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+
 import { Layout } from "@templates";
 import {
   PersonBlock,
@@ -17,6 +16,7 @@ import {
   CustomRightArrow,
   ButtonGroup
 } from "@components";
+import { CERTIFICATES, LETTERS, LOGOS, PERSONS } from "@data";
 
 import "@styles/index.scss";
 import "@styles/pages/Main.scss";
@@ -99,7 +99,7 @@ const IndexPage = (props) => {
             {PERSONS.map((person, index) => {
               return (
                 <PersonBlock
-                  key={`${index}-person`}
+                  key={`${index}-person-main-page`}
                   mail="test@mail.ru"
                   image={person.image}
                   name={person.name}
@@ -109,6 +109,7 @@ const IndexPage = (props) => {
               );
             })}
           </Carousel>
+          <Callback />
         </div>
         <Advantages />
         <h1 className="title--blue">Клиенты и партнёры</h1>

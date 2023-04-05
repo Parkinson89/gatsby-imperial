@@ -1,9 +1,10 @@
 import React from "react";
+
 import "./Callback.scss";
 
-function Callback({ id }) {
+function Callback() {
   return (
-    <a id={id} href="#callbackwidget" className="callback-btn">
+    <a id="callback" href="#callbackwidget" className="callback-btn">
       <span className="callback-btn__text">Заказать звонок</span>
     </a>
   );

@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import "./NavMenu.scss";
-import Logo from "@assets/images/logo-mobile.png";
 import { PUBLIC_ROUTES } from "@router/routes";
 import ContactsBlock from "../contactsBlock/contactsBlock";
 import Social from "@components/social/social";
 import Callback from "@components/callback/callback";
+
+import "./NavMenu.scss";
+import Logo from "@assets/images/logo-mobile.png";
 
 function NavMenu({ setVisible }) {
   return (

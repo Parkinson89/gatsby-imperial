@@ -1,7 +1,9 @@
 import React from "react";
-import "./ServicesList.scss";
+
 import { UL_SERVICES } from "@data";
 import { openUl } from "@helpers";
+
+import "./ServicesList.scss";
 
 function ServicesList() {
   return (
